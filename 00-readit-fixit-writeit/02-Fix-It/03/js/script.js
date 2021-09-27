@@ -1,4 +1,4 @@
-const tvshows = [
+const movies = [
   `legion`,
   `sneaky pete`,
   `santa clarita diet`,

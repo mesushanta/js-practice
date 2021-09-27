@@ -11,8 +11,23 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
 
-    // your code here
-
+    if(hour >= 18 ) {
+      var msg = "Good Evening 1";
+    }
+    else if(hour < 18 && hour >= 17) {
+      if(minute < 30) {
+        var msg = "Hello! before 17:30";
+      }
+      else {
+        var msg = "good Evening 2";
+      }
+    }
+    else {
+      var msg = "Hello! before 17:30";
+    }
+    document.getElementById("target").innerHTML = msg;
 })();

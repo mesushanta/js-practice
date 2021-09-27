@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+    document.getElementById('run').addEventListener("click", getAge);
+
+    function getAge() {
+      var year = document.getElementById('dob-year').value;
+      var month = document.getElementById('dob-month').value;
+      var day = document.getElementById('dob-day').value;
+      var dob = new Date(year + '-' + month + '-' + day);
+      var diff_ms = Date.now() - dob;
+      var age = new Date(diff_ms);
+      alert(age);
+    }
 
 })();
