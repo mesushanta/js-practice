@@ -13,7 +13,23 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     var performOperation = function(operation) {
-        // perform the operation
+      var x = document.getElementById("op-one").value;
+      var y = document.getElementById("op-two").value;
+      switch (operation) {
+        case 'addition':
+          var result = Number(x) + Number(y);
+          break;
+        case 'substraction':
+          var result = Number(x) - Number(y);
+          break;
+        case 'multiplication':
+          var result = Number(x) * Number(y);
+          break;
+        case 'division':
+          var result = Number(x) / Number(y);
+          break;
+      }
+      alert(result);
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {

@@ -16,14 +16,14 @@
     var minute = date.getMinutes();
 
     if(hour >= 18 ) {
-      var msg = "Good Evening 1";
+      var msg = "Good Evening";
     }
     else if(hour < 18 && hour >= 17) {
       if(minute < 30) {
         var msg = "Hello! before 17:30";
       }
       else {
-        var msg = "good Evening 2";
+        var msg = "good Evening";
       }
     }
     else {

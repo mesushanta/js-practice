@@ -14,13 +14,16 @@
     document.getElementById('run').addEventListener("click", getAge);
 
     function getAge() {
+      var today = new Date();
       var year = document.getElementById('dob-year').value;
       var month = document.getElementById('dob-month').value;
       var day = document.getElementById('dob-day').value;
-      var dob = new Date(year + '-' + month + '-' + day);
-      var diff_ms = Date.now() - dob;
-      var age = new Date(diff_ms);
-      alert(age);
+      var dob = new Date(year, month, day);
+      var ageDifMs = today.getTime() - dob.getTime();
+      var ageDate = new Date(ageDifMs);
+      var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+      alert("Your age is: " + age);
+
     }
 
 })();

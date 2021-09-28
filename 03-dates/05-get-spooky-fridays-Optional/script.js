@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    const getFriday = () => {
+      var year = document.getElementById('year').value;
+      if(year.toString().length != 4 || isNaN(year) ) {
+        alert('invalid year')
+      }
+      else {
+        var d = new Date();
+        var desired_months = [];
+        for (i=0; i<12; i++) {
+          d.setFullYear(year, i,13);
+            if (d.getDay() == 5)
+            {
+              desired_months.push(months[i]);
+            }
+          }
+        }
+        alert(desired_months);
+      }
+
+
+    document.getElementById('run').addEventListener("click", getFriday);
 
 })();

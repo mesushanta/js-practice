@@ -10,7 +10,21 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
+    var numbers = [];
+    for(i=1; i<=100; i++) {
+      if((i%3) == 0 && (i%5) == 0) {
+        numbers.push('fizzbuzz');
+      }
+      else if((i%3) == 0) {
+        numbers.push('fizz');
+      }
+      else if((i%5) == 0) {
+        numbers.push('buzz');
+      }
+      else {
+        numbers.push(i);
+      }
+    }
+    console.log(numbers);
 
 })();
