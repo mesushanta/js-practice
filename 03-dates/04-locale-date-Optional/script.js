@@ -23,10 +23,4 @@
 
     document.getElementById("target").innerHTML = desired_date;
 
-    // 
-    //
-    // const options = { weekday: 'long', day: 'numeric',  month: 'long', year: 'numeric' };
-    //
-    // console.log(event.toLocaleDateString('de-DE', options));
-
 })();

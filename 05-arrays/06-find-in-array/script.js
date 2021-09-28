@@ -89,6 +89,14 @@
         },
     ];
 
-    // your code here
+
+    document.getElementById('run').addEventListener('click', function() {
+
+      const found = people.find(element => element.firstname === "Jean" && element.lastname === "Dupont")
+      console.log(found.email);
+      const checkEmail = (element) => element.email === found.email;
+      console.log(people.findIndex(checkEmail));
+
+    });
 
 })();

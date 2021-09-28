@@ -18,10 +18,13 @@
       var year = document.getElementById('dob-year').value;
       var month = document.getElementById('dob-month').value;
       var day = document.getElementById('dob-day').value;
+
       var dob = new Date(year, month, day);
+
       var ageDifMs = today.getTime() - dob.getTime();
       var ageDate = new Date(ageDifMs);
       var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+      
       alert("Your age is: " + age);
 
     }

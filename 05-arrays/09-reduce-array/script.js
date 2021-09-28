@@ -89,6 +89,13 @@
         },
     ];
 
-    // your code here
+    function sumReducer(sum, val) {
+        return sum + val;
+    }
+
+    document.getElementById('run').addEventListener('click' , function() {
+        var total = people.map(person => person.age).reduce(sumReducer, 0);
+        console.log(total);
+    });
 
 })();

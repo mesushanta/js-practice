@@ -25,7 +25,6 @@
       var num = document.getElementById("number").value;
       alert(factorial(num));
 
-
     });
 
 

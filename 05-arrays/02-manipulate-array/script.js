@@ -24,6 +24,14 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+      console.log(fruits);
+      fruits = fruits.slice(1, 9);
+      console.log(fruits);
+      fruits.unshift('banana');
+      console.log(fruits);
+      fruits.push('kiwi');
+      console.log(fruits);
+    });
 
 })();

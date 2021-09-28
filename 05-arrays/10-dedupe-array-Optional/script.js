@@ -28,5 +28,11 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function() {
+      function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+      }
+      var unique = fruits.filter(onlyUnique);
+      console.log(unique);
+    });
 })();
