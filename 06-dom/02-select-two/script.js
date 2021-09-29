@@ -11,6 +11,8 @@
 
 (function() {
 
-    // your code here
+    const element = document.querySelector('.material p');
+
+    element.innerHTML = "Owned";
 
 })();

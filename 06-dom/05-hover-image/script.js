@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
-
+    const el = document.querySelector('.material figure img');
+    const original = el.getAttribute('src');
+    const hovered = el.getAttribute('data-hover');
+    el.addEventListener('mouseover', function(event) {
+      el.setAttribute('src', hovered)
+    });
+    el.addEventListener('mouseleave', function(event) {
+      el.setAttribute('src', original)
+    });
 })();

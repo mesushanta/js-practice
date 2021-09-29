@@ -19,6 +19,17 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    var counter = 1;
+    const el = document.getElementById('next');
+    const image = document.querySelector('.material figure img');
+
+    el.addEventListener('click', function() {
+      image.setAttribute('src', gallery[counter]);
+      counter++
+      if(counter == gallery.length) {
+        counter = 0;
+      }
+    });
+
 
 })();

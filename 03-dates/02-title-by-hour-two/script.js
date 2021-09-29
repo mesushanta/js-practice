@@ -11,11 +11,11 @@
 
 (function() {
 
-    var date = new Date();
-    var hour = date.getHours();
-    var minute = date.getMinutes();
+    var d = new Date();
+    var hour = d.getHours();
+    var minute = d.getMinutes();
 
-    if(hour >= 18 ) {
+    if(hour >= 18) {
       var msg = "Good Evening";
     }
     else if(hour < 18 && hour >= 17) {

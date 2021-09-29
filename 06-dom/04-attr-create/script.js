@@ -11,6 +11,8 @@
 
 (function() {
 
-    // your code here
-
+  const el = document.querySelector('#source');
+  const source = el.getAttribute('data-image');
+  document.querySelector('#target').innerHTML = "<img src='" + source + "'>";
+  el.remove();
 })();
