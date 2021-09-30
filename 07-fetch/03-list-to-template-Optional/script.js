@@ -10,5 +10,30 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  async function getApiData() {
+      fetch('http://localhost:3000/heroes')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        let html = '';
+        data.forEach(movie =>   {
+          html += `
+            <li class="hero">
+                <h4 class="title">
+                    <strong class="name">${movie.name}</strong>
+                    <em class="alter-ego">${movie.alterEgo}</em>
+                </h4>
+                <p class="powers">${movie.abilities}</p>
+            </li>
+          `
+        });
+
+        console.log(html);
+        document.getElementById('target').innerHTML = html;
+      })
+  }
+
+  document.getElementById('run').addEventListener('click', getApiData);
+
 })();

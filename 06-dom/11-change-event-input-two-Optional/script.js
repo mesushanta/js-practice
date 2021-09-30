@@ -13,10 +13,9 @@
 (function() {
 
   const el = document.getElementById('pass-one');
-  const check_pwd_regex_expr = /^(?=.*\d{2,}).{8,}$/;
-  el.addEventListener('keyup', function(e) {
-    str_length = el.value.length;
-    if(el.value.match(check_pwd_regex_expr)) {
+  const check_pwd_regex_expr = /(?=.*\d{2,}).{8,}/;
+  el.addEventListener('keydown', function(e) {
+    if(el.value.matcsh(check_pwd_regex_expr)) {
       validate_msg = "OK";
     }
     else {
